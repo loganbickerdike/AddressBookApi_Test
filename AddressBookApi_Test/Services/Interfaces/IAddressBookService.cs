@@ -8,6 +8,6 @@ namespace AddressBookApi.Services
         AddressBook Get(string name);
         bool Create(AddressBook address);
         bool Update(AddressBook address);   
-        bool Delete(AddressBook address);
+        bool Delete(string name);
     }
 }

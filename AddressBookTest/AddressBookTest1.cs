@@ -74,7 +74,7 @@ namespace AddressBookTest
 
             // Act 
             JsonHelper<AddressBook>.CreateFile(addressBooks);
-            new AddressBookService().Delete(addressBooks.First());
+            new AddressBookService().Delete(addressBooks.First().FristName);
             var deletedAddressBooks = JsonHelper<AddressBook>.GetFiles();
 
             // Assert        

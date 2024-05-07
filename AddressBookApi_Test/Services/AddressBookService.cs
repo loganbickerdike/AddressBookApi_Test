@@ -62,12 +62,12 @@ namespace AddressBookApi.Services
             }
         }
 
-        public bool Delete(AddressBook address)
+        public bool Delete(string name)
         {
             try
             {
                 var addressBooks = JsonHelper<AddressBook>.GetFiles().ToList();
-                addressBooks.Remove(addressBooks.Where(x => x.FristName == address.FristName).First());
+                addressBooks.Remove(addressBooks.Where(x => x.FristName == name).First());
                 JsonHelper<List<AddressBook>>.CreateFile(addressBooks);
 
                 return true;
